@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { getBlogPost, getRelatedPosts, blogPosts } from "@/lib/blog-data"
+import { getBlogPost, getRelatedPosts, blogPosts } from "../../../lib/blog-data"
 
 export async function generateStaticParams() {
   return blogPosts.map((post) => ({
