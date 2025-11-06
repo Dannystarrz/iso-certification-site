@@ -28,7 +28,7 @@ export default function WhoWeAre() {
           <div className="lg:w-1/2 lg:h-full">
             <div className="bg-gray-200 rounded-lg p-8 h-96 flex items-center justify-center">
               <img
-                src="/about-us.jpg"
+                src="/about-us-opt.jpg"
                 alt="Image-Certidocs"
                 className="rounded-lg w-full h-full object-cover"
               />

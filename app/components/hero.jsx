@@ -25,7 +25,7 @@ export default function Hero() {
 
   return (
     <section
-      className="w-full relative h-screen bg-cover bg-center bg-fixed bg-[url('/Certidoc-hero.jpg')] flex items-center justify-between px-6"
+      className="w-full relative h-screen bg-cover bg-center bg-fixed bg-[url('/Certidoc-hero-opt.jpg')] flex items-center justify-between px-6"
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40"></div>
