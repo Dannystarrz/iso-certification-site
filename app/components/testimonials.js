@@ -3,7 +3,7 @@ export default function Testimonials() {
     {
       name: "Chioma Okafor",
       company: "Manufacturing Ltd",
-      text: "TopCertifier made our ISO 9001 certification process seamless and efficient. Highly recommended!",
+      text: "CertiDoc made our ISO 9001 certification process seamless and efficient. Highly recommended!",
       rating: 5,
     },
     {

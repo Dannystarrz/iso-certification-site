@@ -50,8 +50,8 @@ export default function ContactPage() {
                 <Phone size={32} className="text-[#427869]" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Phone</h3>
-              <p className="text-gray-600">+234 813 529 3329</p>
-              <p className="text-gray-600">+234 703 128 7726</p>
+              <p className="text-gray-600">+234 706 202 4758</p>
+              <p className="text-gray-600">+234 803 232 0932</p>
             </div>
 
             {/* Email */}
@@ -60,8 +60,8 @@ export default function ContactPage() {
                 <Mail size={32} className="text-[#427869]" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Email</h3>
-              <p className="text-gray-600">info@topcertifier.com</p>
-              <p className="text-gray-600">support@topcertifier.com</p>
+              <p className="text-gray-600">info@certidocsolutions.com</p>
+              <p className="text-gray-600">support@certidocsolutions.com</p>
             </div>
 
             {/* Address */}
@@ -70,9 +70,8 @@ export default function ContactPage() {
                 <MapPin size={32} className="text-[#427869]" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Address</h3>
-              <p className="text-gray-600">Citscape Mall Former</p>
-              <p className="text-gray-600">Sharif Plaza Suite CJ420</p>
-              <p className="text-gray-600">Wuse II, Abuja</p>
+              <p className="text-gray-600">38 Ewenla street, </p>
+              <p className="text-gray-600">Egbe-Idimu Lagos.</p>
             </div>
 
             {/* Hours */}
@@ -219,16 +218,7 @@ export default function ContactPage() {
         <div className="container">
           <h2 className="text-3xl font-bold mb-8 text-center">Find Us</h2>
           <div className="w-full h-96 bg-gray-200 rounded-lg overflow-hidden">
-            <iframe
-              width="100%"
-              height="100%"
-              frameBorder="0"
-              title="TopCertifier Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.5234567890123!2d3.1899!3d9.0765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104b0b0b0b0b0b0b%3A0x0!2sAbuja%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1234567890"
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52310.16205282743!2d3.2394890647753205!3d6.57695126500317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b902f44597d99%3A0x8e65408ebd4c19bc!2sAlh.%20Waidi%20Ewe-Nla%20St%2C%20Isheri%20Olofin%2C%20Idimu%2FIsheri%20Olofin%20102213%2C%20Lagos!5e0!3m2!1sen!2sng!4v1762863672915!5m2!1sen!2sng" width="100%" height="100%" title="Certidoc Location"allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </section>

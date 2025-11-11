@@ -1,10 +1,10 @@
 import Link from "next/link"
 
 export const metadata = {
-  title: "About CertiDocs | ISO Certification Nigeria",
+  title: "About CertiDoc | ISO Certification Nigeria",
   description:
-    "Learn about CertiDocs, an internationally recognized ISO certification and consulting company in Nigeria with 3+ years of experience.",
-  keywords: "About CertiDocs, ISO consultants Nigeria, certification company",
+    "Learn about CertiDoc, an internationally recognized ISO certification, documentation and consulting company with 3+ years of experience.",
+  keywords: "About CertiDoc, ISO consultants Nigeria, certification company",
 }
 
 export default function AboutPage() {
@@ -38,8 +38,8 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="section bg-[#427869] text-white py-20">
         <div className="container">
-          <h1 className="text-5xl font-bold mb-4">About CertiDocs</h1>
-          <p className="text-xl text-gray-200">Your trusted partner for ISO certification and compliance in Nigeria</p>
+          <h1 className="text-5xl font-bold mb-4">About CertiDoc</h1>
+          <p className="text-xl text-gray-200">Your trusted global partner for ISO certification, documentation and compliance.</p>
         </div>
       </section>
 
@@ -49,7 +49,7 @@ export default function AboutPage() {
           <div className="max-w-3xl">
             <h2 className="text-3xl font-bold mb-6">Who We Are</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              CertiDocs is an internationally recognized Consulting & Certification Company in Nigeria. We specialize
+              CertiDoc is an internationally recognized Consulting & Certification Company. We specialize
               in helping organizations achieve ISO certification and other international compliance standards. With over
               3 years of experience, we have successfully guided more than 1,000 organizations through their
               certification journey.

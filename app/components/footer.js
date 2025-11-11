@@ -8,9 +8,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div>
-            <h4 className="text-lg font-bold mb-4 text-[#89C45A]">CertiDocs</h4>
+            <h4 className="text-lg font-bold mb-4 text-[#89C45A]">CertiDoc</h4>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Your trusted partner for ISO certification and compliance in Nigeria.
+              Your trusted global partner for ISO certification, documentation and compliance.
             </p>
           </div>
 
@@ -47,15 +47,21 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <Phone size={16} className="text-[#89C45A] mt-1 flex-shrink-0" />
-                <span className="text-gray-400">+234 813 529 3329</span>
+                <div className="flex flex-col gap-1">
+                  <span className="text-gray-400">+234 706 202 4758</span>
+                  <span className="text-gray-400">+234 706 202 4758</span>
+                </div>
               </li>
               <li className="flex items-start gap-2">
                 <Mail size={16} className="text-[#89C45A] mt-1 flex-shrink-0" />
-                <span className="text-gray-400">info@topcertifier.com</span>
+                <div className="flex flex-col gap-1">
+                  <span className="text-gray-400">info@certidocsolutions.com, </span>
+                  <span className="text-gray-400">support@certidocsolutions.com</span>
+                </div>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin size={16} className="text-[#89C45A] mt-1 flex-shrink-0" />
-                <span className="text-gray-400">Citscape Mall, Abuja</span>
+                <span className="text-gray-400">38 Ewanla street, Egbe-Idimu Lagos.</span>
               </li>
             </ul>
           </div>
@@ -77,7 +83,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-          <p>&copy; 2025 CertiDocs. All rights reserved.</p>
+          <p>&copy; 2025 CertiDoc. All rights reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <Link href="#" className="hover:text-[#89C45A]">
               Privacy Policy

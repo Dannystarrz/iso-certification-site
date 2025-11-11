@@ -8,15 +8,15 @@ export default function WhoWeAre() {
             <div className="text-[#89C45A] font-semibold mb-2">ABOUT US</div>
             <h2 className="text-4xl font-bold mb-8">WHO WE ARE</h2>
             <p className="text-gray-700 leading-relaxed mb-6">
-              ISO Certification in Nigeria demonstrates your commitment to quality, customer satisfaction, and
-              continuous improvement, enhancing your reputation and competitiveness in the market. TopCertifier is an
-              internationally recognized Consulting & Certification Company in Nigeria. We offer our services for ISO,
+              ISO Certification demonstrates your commitment to quality, customer satisfaction, and
+              continuous improvement, enhancing your reputation and competitiveness in the market. CertiDocs is an
+              internationally recognized Consulting & Certification Company. We offer our services for ISO,
               SOC, GDPR, PCI DSS, CE Mark, HACCP, HIPAA, HALAL, CMMI, VAPT and other Compliance Certifications.
             </p>
             <p className="text-gray-700 leading-relaxed mb-6">
               We specialize in helping organizations achieve ISO certification through expert guidance and support. Our
               team of experienced consultants is dedicated to providing customized solutions to meet the unique needs of
-              each client, and we work closely with them to ensure a smooth and successful certification process. We
+              each client, and we work closely with them to ensure a smooth and successful certification and documentation process. We
               pride ourselves on our commitment to quality and customer satisfaction, and our goal is to help our
               clients improve their operations, increase efficiency, and enhance their reputation through implementing
               ISO and other international standards.
@@ -29,7 +29,7 @@ export default function WhoWeAre() {
             <div className="bg-gray-200 rounded-lg p-8 h-96 flex items-center justify-center">
               <img
                 src="/about-us-opt.jpg"
-                alt="Image-Certidocs"
+                alt="Image-Certidoc"
                 className="rounded-lg w-full h-full object-cover"
               />
             </div>

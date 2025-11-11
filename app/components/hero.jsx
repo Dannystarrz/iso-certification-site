@@ -79,9 +79,9 @@ export default function Hero() {
 
         {/* Right Content */}
         <div className="w-full lg:w-1/2 text-white text-center lg:text-right">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">ISO CERTIFICATION IN NIGERIA</h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">ISO CERTIFICATION ACROSS THE GLOBE</h1>
           <p className="text-lg md:text-xl mb-8 leading-relaxed">
-            For a hassle free certification process contact us today. Our approach made simpler, faster, and affordable!
+            For a hassle free certification and documentation process contact us today. Our approach made simpler, faster, and affordable!
           </p>
           <Link href="/contact" className="btn-primary inline-block">
             FREE CONSULTATION

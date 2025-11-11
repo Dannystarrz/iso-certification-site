@@ -15,7 +15,7 @@ export default function Navigation() {
     { href: "/services", label: "SERVICES" },
     { href: "/industries", label: "INDUSTRIES" },
     { href: "/faq", label: "FAQ" },
-    { href: "/blog", label: "BLOG" },
+    // { href: "/blog", label: "BLOG" },
     { href: "/contact", label: "CONTACT US" },
   ]
 
@@ -26,7 +26,7 @@ export default function Navigation() {
           <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center font-semibold p-2">
             CTD
           </div>
-          <span className="text-white">CertiDocs</span>
+          <span className="text-white">CertiDoc</span>
         </Link>
 
         {/* Desktop Menu */}

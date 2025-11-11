@@ -50,6 +50,16 @@ export default function IndustriesPage() {
       description: "Improve service quality and data security with ISO 9001 and ISO 27001 certifications.",
       certifications: ["ISO 9001", "ISO 27001", "ISO 45001"],
     },
+    {
+      name: "Agriculture",
+      description: "Improve service quality and data security with ISO 9001 and ISO 22001 certifications.",
+      certifications: ["ISO 9001", "ISO 22001", "ISO 14001"],
+    },
+    {
+      name: "Research Institues",
+      description: "Improve service quality and data security with ISO 9001 and ISO 71025 certifications.",
+      certifications: ["ISO 9001", "ISO 71025", "ISO 14001"],
+    },
   ]
 
   return (
