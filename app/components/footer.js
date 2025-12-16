@@ -49,7 +49,7 @@ export default function Footer() {
                 <Phone size={16} className="text-[#89C45A] mt-1 flex-shrink-0" />
                 <div className="flex flex-col gap-1">
                   <span className="text-gray-400">+234 706 202 4758</span>
-                  <span className="text-gray-400">+234 706 202 4758</span>
+                  <span className="text-gray-400">+234 803 232 0932</span>
                 </div>
               </li>
               <li className="flex items-start gap-2">

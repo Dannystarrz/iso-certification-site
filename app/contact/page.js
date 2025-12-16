@@ -12,22 +12,59 @@ export default function ContactPage() {
     company: "",
     service: "",
     message: "",
+    honeypot: "",
   })
 
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState("")
+
 
   const handleChange = (e) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e) => {
+const handleSubmit = async (e) => {
     e.preventDefault()
-    // Mock submission
-    console.log("Form submitted:", formData)
-    setSubmitted(true)
-    setFormData({ name: "", email: "", phone: "", company: "", service: "", message: "" })
-    setTimeout(() => setSubmitted(false), 5000)
+    setLoading(true)
+    setError("")
+    setSubmitted(false)
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to send message")
+      }
+
+      // Success
+      setSubmitted(true)
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        company: "",
+        service: "",
+        message: "",
+        honeypot: "",
+      })
+
+      // Hide success message after 5 seconds
+      setTimeout(() => setSubmitted(false), 5000)
+    } catch (err) {
+      setError(err.message)
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -87,20 +124,32 @@ export default function ContactPage() {
         </div>
       </section>
 
+      
+
       {/* Contact Form Section */}
       <section className="section bg-gray-100">
         <div className="container">
           <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-8">
             <h2 className="text-3xl font-bold mb-8">Send us a Message</h2>
 
-            {submitted && (
-              <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
-                <p className="font-semibold">Message Sent Successfully!</p>
-                <p>Thank you for contacting us. We will get back to you soon.</p>
+            {error && (
+              <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+                <p className="font-semibold">Error</p>
+                <p>{error}</p>
               </div>
             )}
 
             <form onSubmit={handleSubmit} className="space-y-6">
+              <input
+                type="text"
+                name="honeypot"
+                value={formData.honeypot}
+                onChange={handleChange}
+                style={{ position: "absolute", left: "-9999px" }}
+                tabIndex="-1"
+                autoComplete="off"
+                aria-hidden="true"
+              />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
@@ -113,6 +162,7 @@ export default function ContactPage() {
                     value={formData.name}
                     onChange={handleChange}
                     required
+                    disabled={loading}
                     className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-blue-900"
                     placeholder="Your name"
                   />
@@ -128,6 +178,7 @@ export default function ContactPage() {
                     value={formData.email}
                     onChange={handleChange}
                     required
+                    disabled={loading}
                     className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-blue-900"
                     placeholder="your@email.com"
                   />
@@ -146,6 +197,7 @@ export default function ContactPage() {
                     value={formData.phone}
                     onChange={handleChange}
                     required
+                    disabled={loading}
                     className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-blue-900"
                     placeholder="+234 XXX XXX XXXX"
                   />
@@ -160,6 +212,7 @@ export default function ContactPage() {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
+                    disabled={loading}
                     className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-blue-900"
                     placeholder="Your company"
                   />
@@ -176,6 +229,7 @@ export default function ContactPage() {
                   value={formData.service}
                   onChange={handleChange}
                   required
+                  disabled={loading}
                   className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-blue-900"
                 >
                   <option value="">Select a service</option>
@@ -199,14 +253,26 @@ export default function ContactPage() {
                   value={formData.message}
                   onChange={handleChange}
                   required
+                  disabled={loading}
                   rows="6"
                   className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-blue-900"
                   placeholder="Tell us about your certification needs..."
                 ></textarea>
               </div>
 
-              <button type="submit" className="w-full btn-primary">
-                SEND MESSAGE
+              {submitted && (
+              <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+                <p className="font-semibold">Message Sent Successfully!</p>
+                <p>Thank you for contacting us. We will get back to you soon.</p>
+              </div>
+            )}
+
+              <button
+                type="submit"
+                className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
+                disabled={loading}
+              >
+                {loading ? "SENDING..." : "SEND MESSAGE"}
               </button>
             </form>
           </div>
@@ -218,7 +284,7 @@ export default function ContactPage() {
         <div className="container">
           <h2 className="text-3xl font-bold mb-8 text-center">Find Us</h2>
           <div className="w-full h-96 bg-gray-200 rounded-lg overflow-hidden">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52310.16205282743!2d3.2394890647753205!3d6.57695126500317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b902f44597d99%3A0x8e65408ebd4c19bc!2sAlh.%20Waidi%20Ewe-Nla%20St%2C%20Isheri%20Olofin%2C%20Idimu%2FIsheri%20Olofin%20102213%2C%20Lagos!5e0!3m2!1sen!2sng!4v1762863672915!5m2!1sen!2sng" width="100%" height="100%" title="Certidoc Location"allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52310.16205282743!2d3.2394890647753205!3d6.57695126500317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b902f44597d99%3A0x8e65408ebd4c19bc!2sAlh.%20Waidi%20Ewe-Nla%20St%2C%20Isheri%20Olofin%2C%20Idimu%2FIsheri%20Olofin%20102213%2C%20Lagos!5e0!3m2!1sen!2sng!4v1762863672915!5m2!1sen!2sng" width="100%" height="100%" title="Certidoc Location"allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </section>

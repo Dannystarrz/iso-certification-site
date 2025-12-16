@@ -60,6 +60,16 @@ export default function IndustriesPage() {
       description: "Improve service quality and data security with ISO 9001 and ISO 71025 certifications.",
       certifications: ["ISO 9001", "ISO 71025", "ISO 14001"],
     },
+    {
+      name: "Cosmetics",
+      description: "Ensure product safety, quality consistency, and regulatory compliance across cosmetic manufacturing and distribution.",
+      certifications: ["ISO 22716", "ISO 9001", "ISO 14001"],
+    },
+    {
+      name: "Textiles, Fabrics & Fashion",
+      description: "Enhance product quality, sustainability, and ethical production across textile and fashion supply chains.",
+      certifications: ["ISO 9001", "ISO 14001", "ISO 45001"],
+    },
   ]
 
   return (

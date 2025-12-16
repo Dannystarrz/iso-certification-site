@@ -4,6 +4,7 @@ import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import FloatingButton from "@/components/floating-button"
 import { OrganizationSchema, LocalBusinessSchema } from "@/components/schema-markup"
+import ChatWidget from "./components/chat-widget/chat-widget"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -55,7 +56,8 @@ export default function RootLayout({ children }) {
         <Navigation />
         <main className="w-full">{children}</main>
         <Footer />
-        <FloatingButton />
+        {/* <FloatingButton /> */}
+        {/* <ChatWidget/> */}
       </body>
     </html>
   )

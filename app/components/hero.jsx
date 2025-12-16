@@ -4,6 +4,7 @@ import Link from "next/link"
 import { useState } from "react"
 
 export default function Hero() {
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -11,16 +12,52 @@ export default function Hero() {
     message: "",
   })
 
+   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState(null) // 'success' | 'error' | null
+  const [errorMessage, setErrorMessage] = useState("")
+
   const handleChange = (e) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Mock submission
-    alert("Thank you for your inquiry! We will contact you soon.")
-    setFormData({ name: "", email: "", phone: "", message: "" })
+    setIsSubmitting(true)
+    setSubmitStatus(null)
+    setErrorMessage("")
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          service: "General Enquiry",
+        }),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to submit form")
+      }
+
+      setSubmitStatus("success")
+      setFormData({ name: "", email: "", phone: "", message: "" })
+
+      // Auto-hide success message after 5 seconds
+      setTimeout(() => {
+        setSubmitStatus(null)
+      }, 5000)
+    } catch (error) {
+      setSubmitStatus("error")
+      setErrorMessage(error.message || "Something went wrong. Please try again.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -35,13 +72,20 @@ export default function Hero() {
         <div className="w-full lg:w-1/3 bg-white/90 rounded-lg shadow-xl p-6">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">ENQUIRE NOW</h3>
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+            {submitStatus === "error" && (
+              <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800">
+                <p className="font-semibold">Error</p>
+                <p className="text-sm">{errorMessage}</p>
+              </div>
+            )}
             <input
-              type="text"
+               type="text"
               name="name"
               placeholder="Name"
               value={formData.name}
               onChange={handleChange}
               required
+              disabled={isSubmitting}
               className="w-full h-12 px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-blue-900"
             />
             <input
@@ -51,6 +95,7 @@ export default function Hero() {
               value={formData.email}
               onChange={handleChange}
               required
+              disabled={isSubmitting}
               className="w-full px-4 h-12 py-3 border border-gray-300 rounded focus:outline-none focus:border-blue-900"
             />
             <input
@@ -60,6 +105,7 @@ export default function Hero() {
               value={formData.phone}
               onChange={handleChange}
               required
+              disabled={isSubmitting}
               className="w-full px-4 h-12 py-3 border border-gray-300 rounded focus:outline-none focus:border-blue-900"
             />
             <textarea
@@ -68,11 +114,24 @@ export default function Hero() {
               value={formData.message}
               onChange={handleChange}
               required
+              disabled={isSubmitting}
               rows="4"
               className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-blue-900"
             ></textarea>
-            <button type="submit" className="w-full btn-primary">
-              SUBMIT
+
+            {submitStatus === "success" && (
+              <div className="mb-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800">
+                <p className="font-semibold">Thank you for your inquiry!</p>
+                <p className="text-sm">We will contact you soon.</p>
+              </div>
+            )}
+
+            <button
+              type="submit"
+              className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "SUBMITTING..." : "SUBMIT"}
             </button>
           </form>
         </div>
