@@ -9,13 +9,13 @@ export default function sitemap() {
       priority: 1,
     },
     {
-      url: `${baseUrl}/about`,
+      url: `${baseUrl}about`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/services`,
+      url: `${baseUrl}services`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
@@ -57,13 +57,13 @@ export default function sitemap() {
     //   priority: 0.8,
     // },
     {
-      url: `${baseUrl}/industries`,
+      url: `${baseUrl}industries`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/faq`,
+      url: `${baseUrl}faq`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
@@ -111,7 +111,7 @@ export default function sitemap() {
     //   priority: 0.7,
     // },
     {
-      url: `${baseUrl}/contact`,
+      url: `${baseUrl}contact`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
