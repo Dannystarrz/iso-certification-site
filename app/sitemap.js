@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = "certidocsolutions.com/"
+  const baseUrl = "https://certidocsolutions.com/"
 
   const routes = [
     {
