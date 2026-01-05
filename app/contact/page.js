@@ -296,7 +296,7 @@ const handleSubmit = async (e) => {
           <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
             Our team is ready to help. Reach out to us via phone, email, or the contact form above.
           </p>
-          <Link href="tel:+2348135293329" className="btn-primary">
+          <Link href="tel:+2347062024758" className="btn-primary">
             CALL US NOW
           </Link>
         </div>
