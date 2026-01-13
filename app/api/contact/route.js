@@ -36,7 +36,7 @@ export async function POST(request) {
       return NextResponse.json({ error: "Email service is not configured" }, { status: 500 })
     }
 
-    const RECIPIENT_EMAIL = process.env.RECIPIENT_EMAIL || "danny.starr007@gmail.com"
+    const RECIPIENT_EMAIL = process.env.RECIPIENT_EMAIL || "support@certidocsolutions.com"
 
     // Prepare email content
     const emailHtml = `
