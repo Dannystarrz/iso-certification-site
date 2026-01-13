@@ -1,10 +1,10 @@
 import Link from "next/link"
 
 export const metadata = {
-  title: "ISO Certification Services | TopCertifier Nigeria",
+  title: "ISO Certification Services | Certidoc Solutions",
   description:
     "Comprehensive ISO certification services including ISO 9001, ISO 14001, ISO 45001, ISO 22000, ISO 27001, and more.",
-  keywords: "ISO services, ISO certification, ISO consultants Nigeria",
+  keywords: "ISO services, ISO certification, ISO consultants Nigeria, ISO",
 }
 
 const services = [

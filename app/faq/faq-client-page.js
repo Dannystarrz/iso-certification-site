@@ -27,7 +27,7 @@ export default function FAQClientPage() {
     {
       question: "Do I need to hire external consultants?",
       answer:
-        "While it's possible to pursue certification independently, hiring experienced consultants like TopCertifier significantly increases your chances of success and reduces the time required. Our expertise helps you avoid costly mistakes and ensures compliance with all requirements.",
+        "While it's possible to pursue certification independently, hiring experienced consultants like Certidoc solutions significantly increases your chances of success and reduces the time required. Our expertise helps you avoid costly mistakes and ensures compliance with all requirements.",
     },
     {
       question: "Which ISO certification should my organization pursue?",

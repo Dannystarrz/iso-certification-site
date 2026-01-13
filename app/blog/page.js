@@ -2,7 +2,7 @@ import Link from "next/link"
 import { blogPosts } from "../../lib/blog-data"
 
 export const metadata = {
-  title: "Blog | ISO Certification Tips & Insights | TopCertifier",
+  title: "Blog | ISO Certification Tips & Insights | Certidoc Solutions",
   description:
     "Read our blog for insights, tips, and best practices on ISO certification, quality management, and business compliance.",
   keywords: "ISO blog, certification tips, quality management, business compliance",

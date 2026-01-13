@@ -9,20 +9,20 @@ import ChatWidget from "./components/chat-widget/chat-widget"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "ISO Certification Nigeria | CertiDocs",
+  title: "Global ISO Certification | CertiDoc Solutions",
   description:
-    "Get ISO certification in Nigeria with CertiDocs. Expert ISO consultants offering ISO 9001, ISO 14001, ISO 45001, and more.",
-  keywords: "ISO certification Nigeria, ISO consultants, ISO 9001, ISO 14001, ISO 45001",
+    "Get ISO Certification with CertiDoc Solutions. Expert ISO consultants offering ISO 9001, ISO 14001, ISO 45001, and more.",
+  keywords: "ISO certification, ISO consultants, Certification, certifications, certidoc, certidoc solutions, ISO 9001, ISO 14001, ISO 45001, ISO",
   openGraph: {
-    title: "ISO Certification Nigeria | CertiDocs",
-    description: "Get ISO certification in Nigeria with CertiDocs. Expert ISO consultants.",
+    title: "Global ISO Certification | CertiDoc Solutions",
+    description: "Get ISO Certification with CertiDoc Solutions. Expert ISO consultants.",
     url: "/",
-    siteName: "CertiDocs",
+    siteName: "CertiDoc Solutions",
     images: [
       {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
+        url: "/certidoc-logo.jpeg",
+        width: 213,
+        height: 155,
       },
     ],
     locale: "en_NG",
@@ -30,9 +30,9 @@ export const metadata = {
   },
   canonical: "/",
   robots: "index, follow",
-  author: "CertiDocs",
-  creator: "CertiDocs",
-  publisher: "CertiDocs",
+  author: "CertiDoc Solutions",
+  creator: "CertiDoc Solutions",
+  publisher: "CertiDoc Solutions",
 }
 
 export default function RootLayout({ children }) {
@@ -41,12 +41,12 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#004AAD" />
+        <meta name="theme-color" content="#0e2d39" />
         <meta
           name="description"
-          content="Get ISO certification in Nigeria with CertiDocs. Expert ISO consultants offering ISO 9001, ISO 14001, ISO 45001, and more."
+          content="Get ISO certification with CertiDoc Solutions. Expert ISO consultants offering ISO 9001, ISO 14001, ISO 45001, and more."
         />
-        <meta name="keywords" content="ISO certification Nigeria, ISO consultants, ISO 9001, ISO 14001, ISO 45001" />
+        <meta name="keywords" content="ISO certification, ISO consultants, Certification, certifications, certidoc, certidoc solutions, ISO 9001, ISO 14001, ISO 45001, ISO" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="/" />
         <OrganizationSchema />

@@ -1,10 +1,10 @@
 import Link from "next/link"
 
 export const metadata = {
-  title: "About CertiDoc | ISO Certification Nigeria",
+  title: "About CertiDoc Solutions | Global ISO Certification",
   description:
-    "Learn about CertiDoc, an internationally recognized ISO certification, documentation and consulting company with 3+ years of experience.",
-  keywords: "About CertiDoc, ISO consultants Nigeria, certification company",
+    "Learn about CertiDoc Solutions, an internationally recognized ISO certification, documentation and consulting company with 3+ years of experience.",
+  keywords: "About CertiDoc Solutions, ISO consultants Nigeria, ISO consultants, certification company, ISO",
 }
 
 export default function AboutPage() {

@@ -1,10 +1,10 @@
 import Link from "next/link"
 
 export const metadata = {
-  title: "Industries We Serve | TopCertifier Nigeria",
+  title: "Industries We Serve | Certidoc Solutions",
   description:
-    "TopCertifier serves various industries including manufacturing, healthcare, food & beverage, IT, energy, and more.",
-  keywords: "Industries, ISO certification by industry, manufacturing, healthcare, food safety",
+    "Certidoc Solutions serves various industries including manufacturing, healthcare, food & beverage, IT, energy, and more.",
+  keywords: "Industries, ISO certification by industry, manufacturing, healthcare, food safety, ISO",
 }
 
 export default function IndustriesPage() {

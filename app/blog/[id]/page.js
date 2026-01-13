@@ -15,7 +15,7 @@ export function generateMetadata({ params }) {
     }
   }
   return {
-    title: `${post.title} | TopCertifier Blog`,
+    title: `${post.title} | Certidoc Solutions Blog`,
     description: post.excerpt,
     keywords: `${post.category}, ISO certification, ${post.title}`,
   }
