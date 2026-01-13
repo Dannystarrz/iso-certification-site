@@ -71,7 +71,7 @@ ${message}
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: process.env.SENDER_EMAIL || "onboarding@resend.dev",
+        from: process.env.SENDER_EMAIL || "CertiDoc Solutions <no-reply@certidocsolutions.com>",
         to: RECIPIENT_EMAIL,
         subject: `New Contact Form: ${service}`,
         html: emailHtml,
