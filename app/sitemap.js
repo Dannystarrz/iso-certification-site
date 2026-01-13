@@ -1,22 +1,21 @@
 export default function sitemap() {
-  // const baseUrl = "https://certidocsolutions.com"
-  const baseUrl = new URL("https://certidocsolutions.com");
+  const baseUrl = "https://certidocsolutions.com"
 
   const routes = [
     {
-      url: baseUrl.href,
+      url: baseUrl,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
     },
     {
-      url:new URL("/about", baseUrl).href,
+      url: `${baseUrl}/about`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: new URL("/services", baseUrl).href,
+      url: `${baseUrl}/services`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
@@ -58,13 +57,13 @@ export default function sitemap() {
     //   priority: 0.8,
     // },
     {
-      url: new URL("/industries", baseUrl).href,
+      url: `${baseUrl}/industries`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: new URL("/faq", baseUrl).href,
+      url: `${baseUrl}/faq`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
@@ -112,7 +111,7 @@ export default function sitemap() {
     //   priority: 0.7,
     // },
     {
-      url: new URL("/contact", baseUrl).href,
+      url: `${baseUrl}/contact`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,

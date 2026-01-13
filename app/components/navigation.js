@@ -3,9 +3,12 @@
 import Link from "next/link"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
+import Image from "next/image"
+import { usePathname } from "next/navigation"
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const pathName = usePathname();
 
   const toggleMenu = () => setIsOpen(!isOpen)
 
@@ -20,13 +23,11 @@ export default function Navigation() {
   ]
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-[#0e2d39] px-6 shadow-lg">
+    <nav className="sticky top-0 z-50 w-full bg-[#061319] px-6 shadow-lg">
       <div className="flex items-center justify-between h-20 w-full px-6">
         <Link href="/" className="flex items-center gap-2 font-bold">
-          <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center font-semibold p-2">
-            CTD
-          </div>
-          <span className="text-white">CertiDoc</span>
+          <Image src={"/certidoc-logo.jpeg"} alt="certidoc logo" width={213} height={155} className="w-[90px] h-[57px] rounded-xl" priority={true}/>
+          {/* <span className="text-white">CertiDoc</span> */}
         </Link>
 
         {/* Desktop Menu */}
@@ -35,7 +36,7 @@ export default function Navigation() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium hover:text-[#F5F7FA] transition-colors text-white"
+              className={pathName===link.href?"text-sm font-bold text-[#89C45A] transition-colors":"text-sm font-normal hover:text-[#89C45A] transition-colors text-white"}
             >
               {link.label}
             </Link>

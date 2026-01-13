@@ -7,9 +7,9 @@ import CTA from "@/components/cta"
 import Methodology from "@/components/methodology"
 
 export const metadata = {
-  title: "ISO Certification Nigeria | CertiDocs",
+  title: "Global ISO Certification| CertiDocs",
   description:
-    "Get ISO certification in Nigeria with CertiDocs. Expert ISO consultants offering ISO 9001, ISO 14001, ISO 45001, and more.",
+    "Get ISO certification with CertiDocs. Expert ISO consultants offering ISO 9001, ISO 14001, ISO 45001, and more.",
 }
 
 export default function Home() {

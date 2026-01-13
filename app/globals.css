@@ -183,6 +183,10 @@ p {
   color: var(--color-primary);
 }
 
+.thiscolor{
+  background-color: #061319;
+}
+
 .text-secondary {
   color: var(--color-secondary);
 }

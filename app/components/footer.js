@@ -1,14 +1,18 @@
 import Link from "next/link"
 import { Phone, Mail, MapPin, Clock } from "lucide-react"
+import Image from "next/image"
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-16">
+    <footer className="bg-[#061319] text-white py-16">
       <div className="w-full px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div>
-            <h4 className="text-lg font-bold mb-4 text-[#89C45A]">CertiDoc</h4>
+            <Link href="/" className="flex items-center gap-2 font-bold">
+              <Image src={"/certidoc-logo.jpeg"} alt="certidoc logo" width={213} height={155} className="w-[65px] h-[49px] rounded-xl" priority={true} />
+              {/* <span className="text-white">CertiDoc</span> */}
+            </Link>
             <p className="text-gray-400 text-sm leading-relaxed">
               Your trusted global partner for ISO certification, documentation and compliance.
             </p>
@@ -61,7 +65,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-2">
                 <MapPin size={16} className="text-[#89C45A] mt-1 flex-shrink-0" />
-                <span className="text-gray-400">38 Ewanla street, Egbe-Idimu Lagos.</span>
+                <span className="text-gray-400">38 Ewenla street, Egbe-Idimu Lagos.</span>
               </li>
             </ul>
           </div>
